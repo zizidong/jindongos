@@ -1,0 +1,46 @@
+#!/bin/bash
+
+# MyOS Build Configuration Script
+
+set -e
+
+echo "MyOS Build Configuration"
+echo "======================="
+
+# Check for required tools
+check_tool() {
+    if ! command -v $1 &> /dev/null; then
+        echo "Error: $1 is not installed"
+        exit 1
+    fi
+}
+
+echo "Checking for required tools..."
+check_tool gcc
+check_tool ld
+check_tool dd
+check_tool mformat
+check_tool mcopy
+check_tool qemu-system-x86_64
+
+echo "All required tools found!"
+
+# Create build directory
+mkdir -p build
+
+# Check for Limine bootloader
+if [ ! -d "limine" ]; then
+    echo "Downloading Limine bootloader..."
+    git clone https://github.com/limine-bootloader/limine.git --branch=v7.x-binary --depth=1
+fi
+
+# Check for OVMF firmware
+if [ ! -f "OVMF.fd" ]; then
+    echo "Warning: OVMF.fd not found. Please download it from:"
+    echo "https://github.com/tianocore/edk2/releases"
+fi
+
+echo ""
+echo "Configuration complete!"
+echo "Run 'make' to build the kernel"
+echo "Run 'make run' to build and run in QEMU"
