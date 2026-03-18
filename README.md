@@ -5,6 +5,7 @@
 ## 필수 도구
 
 - GCC (x86_64)
+- wsl
 - GNU ld
 - mtools
 - QEMU
