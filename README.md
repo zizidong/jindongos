@@ -121,7 +121,7 @@ make -j$(nproc)
 ```
 깃허브 특유의 대문자 기피에 맞는 이름 작성 -진동-
 
-- 사용된 ai
+  사용된 ai
 - claude
 - gemini
 
