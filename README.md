@@ -1,6 +1,6 @@
 # jindong - UEFI 기반 OS  
 
-표준 Linux에 맞는 파이프라인을 사용하는 표준 Linux기반 OS입니다.
+표준 Linux에 맞는 파이프라인을 사용하는 표준 Linux-like OS입니다.
 
 ## 필수 도구
 
