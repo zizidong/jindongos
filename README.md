@@ -1,4 +1,4 @@
-# jindong - UEFI 기반 OS  중요 아직 패닉에 대한 이유를 못찾음
+# jindong - UEFI 기반 OS  
 
 표준 Linux에 맞는 파이프라인을 사용하는 표준 Linux기반 OS입니다.
 
